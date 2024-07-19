@@ -33,7 +33,6 @@ const API = (() => {
       id: id,
       content: content,
       count: newAmount,
-      // Add other fields if necessary
     };
 
     return fetch(`${URL}/cart/${id}`, {
@@ -165,8 +164,8 @@ const View = (() => {
       const minusBtn = document.createElement("button");
       const plusBtn = document.createElement("button");
       const amount = document.createElement("span");
-
       const amountEl = document.createElement("div");
+
       amountEl.classList.add("inventory-item-amount");
       minusBtn.innerHTML = "-";
       plusBtn.innerHTML = "+";
@@ -295,13 +294,12 @@ const Controller = ((model, view) => {
 
   const handleCheckout = () => {
     view.checkoutBtn.addEventListener("click", () => {
-      for (let item of state.cart) {
-        model.deleteFromCart(item.id);
-      }
+      model.checkout();
       state.cart = [];
     });
   };
   const bootstrap = () => {
+    init();
     handleAddToCart();
     handleDelete();
     handleCheckout();
@@ -309,10 +307,7 @@ const Controller = ((model, view) => {
   };
   return {
     bootstrap,
-    init,
   };
 })(Model, View);
-
-Controller.init();
 
 Controller.bootstrap();

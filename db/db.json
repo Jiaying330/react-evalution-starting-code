@@ -3,12 +3,7 @@
     {
       "id": "1",
       "content": "apple",
-      "count": 2
-    },
-    {
-      "id": "2",
-      "content": "peach",
-      "count": 3
+      "count": 1
     }
   ],
   "inventory": [

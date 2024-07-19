@@ -10,6 +10,11 @@ button {
   cursor: pointer;
   font-size: inherit;
   font: inherit;
+  border: none;
+  padding: 1rem;
+  border-radius: 5px;
+  line-height: 0;
+  color: white;
 }
 
 html {
@@ -18,7 +23,6 @@ html {
 
 body {
   height: 100vh;
-  /* background-color: #f5f5f4; */
   background-image: linear-gradient(to bottom right, #88d66c, #f6fb7a);
   font-family: serif;
   font-weight: 600;
@@ -26,13 +30,12 @@ body {
 }
 
 h1 {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   font-weight: 800;
 }
 
 #app {
   display: flex;
-  /* background-color: aqua; */
   text-align: center;
   justify-content: space-around;
   min-height: 100%;
@@ -64,18 +67,9 @@ h1 {
   display: flex;
   align-items: center;
 }
-button {
-  border: none;
-  padding: 1rem;
-  border-radius: 5px;
-  line-height: 0;
-  color: white;
-}
 
 .checkout-btn {
-  /* display: inline-block; */
   background-color: #000000;
-  /* padding: 1.5rem 1rem; */
   padding: 1.5rem;
   transition: all 0.2s ease;
 }
@@ -119,15 +113,12 @@ button {
 }
 
 ul > li {
-  /* padding: 2rem, 1rem; */
   display: flex;
-  /* background-color: #e1dac8; */
   background-color: rgba(255, 255, 255, 0.603);
   margin-bottom: 1rem;
   border-radius: 5px;
   gap: 1rem;
   align-items: center;
-  /* box-shadow: 0 1px 10px rgba(black, 0.3); */
   justify-content: center;
-  padding: 1rem 1rem;
+  padding: 1rem;
 }
